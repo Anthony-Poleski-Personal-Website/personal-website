@@ -6,21 +6,22 @@ body {
   color: #fff;
   background-color: #1e272e;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 main {
   padding: 96px 24px 96px;
+  margin: 25px 250px 75px 25px;  
 }
 
 main .quote {
   margin-top: 100px;
   margin-left: 25%;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 header {
-  font-size: 2rem;
+  font-size: 2.25rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -60,8 +61,8 @@ a:hover, a:active {
 
 footer {
   text-align: center;
-  font-size: 1em;
-  margin-top: 400px;
+  font-size: .75em;
+  margin-top: 100px;
   margin-bottom: 10px;
 }
 
@@ -74,6 +75,6 @@ img {
   max-height: 300px;
   display: block;
   margin-top: 25px;
-  margin-left: auto;
+  margin-left: 5px;
   margin-right: auto;
 }

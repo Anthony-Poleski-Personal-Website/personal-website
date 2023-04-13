@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Personal Website</title>
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- External JavaScript -->
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <header>
-      <span class="name">Anthony Poleski</span>
-      <nav class="links">
-        <a href="index.html" style="color: #fff; background-color: #2ecc71">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="portfolio.html">PORTFOLIO</a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website - Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Google web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap" rel="stylesheet">
+    <!-- External stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <ul class="menu">
+          <li class="logo"><a href="index.html">Anthony Poleski</a></li>
+          <li class="item"><a href="index.html">Home</a></li>
+          <li class="item"><a href="about.html">About</a></li>
+          <li class="item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="item"><a href="contact.html">Contact</a></li>
+          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
       </nav>
-    </header>
-    <main>
-      <h1>Full-Stack Software Developer</h1>
-      <h2>
-        Interested in developing full-stack applications using CSS, HTML, Java,
-        and JavaScript.
-      </h2>
-      <h3 class="quote" style="color: #2ecc71; font-family: 'Times New Roman', serif;">
-        "Tell me and I will forget; show me and I may not remember; involve me
-        and I will learn." <br />- Confucius
-      </h3>
-    </main>
-    <footer style="margin-top: 300px;">
-      <p>
-        Copyright &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        Anthony Poleski
-      </p>
-    </footer>
-  </body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Full-Stack Software Developer</h1>
+            <p>
+                Interested in developing full-stack applications using CSS, databases, HTML, Java,
+                and JavaScript.
+              </p>
+        </header>
+        <!-- <article class="intro"><h1>Intro</h1></article> -->
+        <article class="main">
+            <h1>Confucius says:</h1>
+            <p>"Tell me and I will forget; show me and I may not remember; involve me
+                and I will learn." <br /><br />- Confucius</p>
+        </article>
+        <aside class="aside aside1">
+            <h1>Oscar says:</h1>
+            <p>"Be yourself; everyone else is already taken." <br /><br />
+                ― Oscar Wilde</p>
+        </aside>
+        <aside class="aside aside2">
+            <h1>Emily says:</h1>
+            <p>"I'm nobody! Who are you?
+                Are you nobody, too?
+                Then there's a pair of us—don't tell!
+                They'd banish us, you know.
+                <br><br>
+                How dreary to be somebody!
+                How public, like a frog
+                To tell your name the livelong day
+                To an admiring bog!" <br /><br />
+                - Emily Dickinson
+            </p>
+        </aside>
+        <footer class="footer">
+            <!-- <h1>Footer</h1> -->
+            <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Anthony Poleski
+              </p>
+        </footer>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
 </html>

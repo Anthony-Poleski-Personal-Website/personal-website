@@ -1,80 +1,249 @@
-html {
+body {
+  background-color: #1e272e;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
 }
 
-body {
-  color: #fff;
-  background-color: #1e272e;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.25rem;
+p {
+  color: #ccc;
+  font-size: 1.0rem;
 }
 
-main {
-  padding: 96px 24px 96px;
-  margin: 25px 250px 75px 25px;  
-}
-
-main .quote {
-  margin-top: 150px;
-  margin-left: 25%;
-  font-size: 3.5rem;
-}
-
-header {
-  font-size: 2.25rem;
-  position: fixed;
-  left: 0;
-  right: 0;
-  padding: .5em 1em;
-  box-shadow: 0 2px 4px -2px black;
-}
-
-header::after {
-  display: block;
-  clear: both;
-  content: '';
-}
-
-.name {
-  float: left;
-}
-
-.links {
-  float: right;
-}
-
-a:link, a:visited {
-  background-color: #2ecc71;
+h1 {
   color: black;
-  border: 3px solid #2ecc71;
-  border-radius: 8px;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  font-size: 1.75rem;
 }
 
-a:hover, a:active {
-  background-color: #fff;
+h1:nth-child(odd) {
+  background: #2ecc71;
+  /* padding: 0.75rem; */
+}
+
+h1:nth-child(even) {
+  background: #78887F;
+  /* padding: 0.75rem; */
+}
+
+label {
   color: #2ecc71;
 }
 
-footer {
-  text-align: center;
-  font-size: .75em;
-  margin-top: 100px;
-  margin-bottom: 10px;
-}
-
-img {
+img{
   border-radius: 8px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 250px;
-  max-height: 300px;
   display: block;
-  margin-top: 25px;
-  margin-left: 5px;
+  margin-top: 5px;
+  margin-left: auto;
   margin-right: auto;
+  /* width: 50%; */
+  width: 150px;
+  padding: 5px;
 }
+
+.container {
+  margin: 25px 50px;
+}
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.header{
+    border: 1px solid #d2dae2;
+    /* font-size: 24px; */
+    font-size: 1.5rem;
+    height: 320px;
+}
+
+.footer{  
+    border: 1px solid #d2dae2;
+    height: 120px;
+}
+
+.intro{
+    border: 1px solid #d2dae2;
+    font-size: 20px;
+}
+
+.main{
+    border: 1px solid #d2dae2;
+    font-size: 36px;
+}
+
+.aside1{
+    border: 1px solid #d2dae2;
+}
+
+.aside2{
+    border: 1px solid #d2dae2;
+}
+
+@media all and (min-width: 960px){
+    .main{
+        flex: 3;
+    }
+    .aside1{
+        order: 1;
+    }
+    .aside2{
+        order: 2;
+    }
+    .main{
+        order: 2;
+    }
+    .footer{
+        order: 4;
+    }
+    h1{
+      font-size: 2.0rem;
+    }
+}
+
+@media all and (min-width: 700px){
+    .aside{
+        flex: 1;
+    }
+}
+
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 25 50;
+  }
+
+  nav {
+    background-color: #1e272e;
+    padding: 0 15px;
+  }
+
+  a {
+    color: #2ecc71;
+    text-decoration: none;
+  }
+
+  .menu {
+    list-style-type: none;
+  }
+
+  .logo {
+    /* color: #2ecc71; */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 7.5px 10px 7.5px 0;
+  }
+
+  logo span {
+    color: #ccc;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  .item.button {
+    padding: 9px 5px;
+  }
+
+  .item:not(.button) a:hover,
+  .item a:hover::after {
+    color: #ccc;
+  }
+
+  /* Mobile menu */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 15px 5px;
+  }
+
+  .menu a {
+    padding: 15px;
+  }
+
+  .toggle {
+    order: 1;
+    font-size: 20px;
+  }
+
+  .item.button {
+    order: 2;
+  }
+
+  .item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .active .item {
+    display: block;
+  }
+  
+  /* Tablet menu */
+  @media all and (min-width: 700px) {
+    .menu {
+      justify-content: center;
+    }
+
+    .logo {
+      flex: 1;
+    }
+
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+
+    .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+    }
+  }
+
+  /* Desktop menu */
+  @media all and (min-width: 960px) {
+    .menu {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      background: none;
+    }
+
+    .logo {
+      order: 0;
+    }
+
+    .item {
+      order: 1;
+      position: relative;
+      display: block;
+      width: auto;
+    }
+
+    .button {
+      order: 2;
+    }
+
+    .toggle {
+      display: none;
+    }
+  }
+  

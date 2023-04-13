@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Flexbox</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Google web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap" rel="stylesheet">
+    <!-- External stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <ul class="menu">
+          <li class="logo"><a href="index.html">Anthony Poleski</a></li>
+          <li class="item"><a href="index.html">Home</a></li>
+          <li class="item"><a href="about.html">About</a></li>
+          <li class="item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="item"><a href="contact.html">Contact</a></li>
+          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+      </nav>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Contact Form</h1>
+            <p>
+                Please complete all information below.
+              </p>
+        </header>
+        <!-- <article class="intro"><h1>Intro</h1></article> --> 
+        <article class="main" style="font-size: 1.0rem; text-align: left;">
+            <form action="formsubmitted.html">
+                <h1>Personal Information:</h1>
+                <p><label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value="">
+                <label for="lname">Last name:</label>
+                <input type="text" id="fname" name="fname" value="">
+                </p>
+                <p>
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" value="">
+                <label for="phone">Phone number:</label>
+                <input type="text" id="phone" name="phone" value="(888) 555-5555">
+                </p>
+                <p><label for="address">Mailing address:</label></p>
+                <textarea id="address" name="address" rows="4" cols="50">Street Address, City, State, Zip Code</textarea>
+                <h1>Preferred Contact Method</h1>
+                <p><input type="radio" id="viaEmail" name="viaEmail" value="Email">
+                    <label for="viaEmail">Email</label><br>
+                    <input type="radio" id="viaPhone" name="viaPhone" value="Phone">
+                    <label for="viaPhone">Phone</label><br>
+                    <input type="radio" id="viaMail" name="viaMail" value="Mail">
+                    <label for="viaMail">Mail</label>
+                </p>
+                <h1>Interests</h1>
+                <p> 
+                    <input type="checkbox" id="chess" name="chess" value="Chess">
+                    <label for="chess"> Let's play a game of chess online.</label><br>
+                    <input type="checkbox" id="exercise" name="exercise" value="Exercise">
+                    <label for="vehicle2"> Let's compare daily steps.</label><br>
+                    <input type="checkbox" id="fishing" name="fishing" value="Fishing">
+                    <label for="vehicle3"> Let's have a fishing tournament.</label>
+                </p>
+                <br>               
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+        <aside class="aside aside1">
+            <!-- <h1>Aside 1</h1> -->
+        </aside>
+        <aside class="aside aside2">
+            <!-- <h1>Aside 2</h1> -->
+        </aside>
+        <footer class="footer">
+            <!-- <h1>Footer</h1> -->
+            <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Anthony Poleski
+              </p>
+        </footer>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
